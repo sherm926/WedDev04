@@ -4,8 +4,13 @@ from google import genai
 st.title("Geography Chatbot")
 st.write("Ask me anything about countries, capitals, cultures, landmarks, and more!")
 
-API_KEY = "AIzaSyDptZSY1lzN8ARUPdvObvUFcGCqnkGJ_Dc"
-client = genai.Client(api_key=API_KEY)
+
+try:
+    API_KEY = st.secrets["GEMINI_API_KEY"]
+    client = genai.Client(api_key=API_KEY)
+except Exception:
+    st.error("API Key not found! Please configure GEMINI_API_KEY in Streamlit Secrets.")
+    st.stop()
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
