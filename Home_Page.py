@@ -27,5 +27,7 @@ Welcome to our Streamlit Web Development Lab03 app! You can navigate between the
 2. **AI Chatbot Page**: Chat with an AI assistant about geography and other topics
 
 3. **Country Culture Comparator**: Select two countries and a topic to get an AI-generated cultural comparison.
+
+4. **Country Expert Chatbot: Select a country and ask the chatbot anything about the country.
 """)
 
